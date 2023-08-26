@@ -30,7 +30,7 @@ const Reviews = () => {
 
     const randomReview = () => {
         setIndex(() => {
-            let newReviewIndex = Math.floor(Math.random() * 4)
+            let newReviewIndex = Math.floor(Math.random() * reviews.length)
             console.log(newReviewIndex);
             if (newReviewIndex === index) {
                 newReviewIndex += 1;
