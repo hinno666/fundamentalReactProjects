@@ -1,4 +1,5 @@
 import { Accordion } from "./Accordion/Accordion";
+import { Menu } from "./Menu/Menu";
 import Reviews from "./Reviews/Reviews";
 
 export const ProjectsContainer = () => {
@@ -7,6 +8,7 @@ export const ProjectsContainer = () => {
             <h1 className="title">my projects</h1>
             <Reviews />
             <Accordion />
+            <Menu />
         </main>
     );
 }
