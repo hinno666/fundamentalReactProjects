@@ -3,7 +3,7 @@ import { FaBars } from 'react-icons/fa'
 import { links } from '../data'
 import { useRef, useState } from 'react'
 
-const Navbar = () => {
+export const Navbar = () => {
     const [showLinks, setShowLinks] = useState(false)
     const linksContainerRef = useRef(null)
     const linksRef = useRef(null)
@@ -43,5 +43,3 @@ const Navbar = () => {
         </header>
     );
 }
-
-export default Navbar;

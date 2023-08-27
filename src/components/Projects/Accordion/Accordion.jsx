@@ -1,17 +1,22 @@
+import { useState } from "react";
 import { questions } from "../../../data";
-import AccordionItem from "./AccordionItem";
+import { AccordionItem } from "./AccordionItem";
 
-const Accordion = () => {
+export const Accordion = () => {
+    const [currentAccordion, setCurrentAccordion] = useState(null);
+
+    const getId = (id) => {
+        setCurrentAccordion((prevId) => prevId === id ? null : id)
+    }
+
     return (
         <article className="accordion project" id="Accordion">
             <div className="project__name">Accordion</div>
             {questions.map((question) => {
                 return (
-                    <AccordionItem key={question.id} {...question} />
+                    <AccordionItem key={question.id} {...question} currentAccordion={currentAccordion} getId={getId} />
                 )
             })}
         </article>
     );
 }
-
-export default Accordion;
