@@ -3,10 +3,12 @@ import PropTypes from "prop-types";
 import { MenuItem } from "./MenuItem";
 
 
-export const MenuList = ({ menu }) => {
+
+
+export const MenuList = ({ menuItems }) => {
   return (
     <div className="menu__items">
-      {menu.map((menuItem) => {
+      {menuItems.map((menuItem) => {
         return (
           <MenuItem key={menuItem.id} {...menuItem} />
         )
@@ -16,5 +18,5 @@ export const MenuList = ({ menu }) => {
 }
 
 MenuList.propTypes = {
-  menu: PropTypes.array,
+  menuItems: PropTypes.array,
 }
