@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { questions } from "../../../data";
-import { AccordionItem } from "./AccordionItem";
+import { questions } from "../../data";
+import { AccordionItem } from "./AccordionItem/AccordionItem";
 
 export const Accordion = () => {
     const [currentAccordion, setCurrentAccordion] = useState(null);
@@ -10,7 +10,7 @@ export const Accordion = () => {
     }
 
     return (
-        <article className="accordion project" id="Accordion">
+        <article className="accordion withSpacing" id="Accordion">
             <div className="project__name">Accordion</div>
             {questions.map((question) => {
                 return (

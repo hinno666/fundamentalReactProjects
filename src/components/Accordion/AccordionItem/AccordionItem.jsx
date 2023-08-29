@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 
-
 export const AccordionItem = ({ title, info, id, currentAccordion, getId }) => {
 
     return (
@@ -13,6 +12,7 @@ export const AccordionItem = ({ title, info, id, currentAccordion, getId }) => {
         </div>
     );
 }
+
 AccordionItem.propTypes = {
     title: PropTypes.string.isRequired,
     info: PropTypes.string.isRequired,
