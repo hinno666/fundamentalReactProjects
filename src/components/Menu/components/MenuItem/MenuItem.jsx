@@ -3,7 +3,6 @@ import { useState } from "react";
 
 export const MenuItem = ({ img, title, price, desc }) => {
 
-
     const [showText, setShowText] = useState(true);
 
     return (
@@ -16,13 +15,12 @@ export const MenuItem = ({ img, title, price, desc }) => {
                 </header>
                 <p className='item-text'>
                     {showText ? `${desc.substring(0, 30)}...` : desc}
-                    <button onClick={() => setShowText(!showText)}>show</button>
+                    <button onClick={() => setShowText(prevState => !prevState)}>show</button>
                 </p>
             </div>
         </article>
     )
 }
-
 
 MenuItem.propTypes = {
     img: PropTypes.string,

@@ -119,7 +119,7 @@ img {
   text-transform: capitalize;
 }
 
-.project {
+.withSpacing {
   position: relative;
   width: 90vw;
   max-width: var(--fixed-width);
@@ -349,12 +349,18 @@ img {
 }
 
 .btn__filter {
+  cursor: pointer;
   background: var(--red-dark);
   color: var(--white);
   padding: 5px 10px;
   box-shadow: var(--shadow-3);
   border: none;
   border-radius: var(--borderRadius);
+  transition: var(--transition);
+}
+
+.btn__filter:hover {
+  background-color: var(--green-dark);
 }
 
 .btn__filter.active {

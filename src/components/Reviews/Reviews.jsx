@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { reviews } from "../../../data";
+import { reviews } from "../../data";
 
 const Reviews = () => {
     const [index, setIndex] = useState(0)
@@ -41,7 +41,7 @@ const Reviews = () => {
     const { image, job, name, text } = reviews[index];
 
     return (
-        <article className='review project' id="Reviews">
+        <article className='review withSpacing' id="Reviews">
             <div className="project__name">Reviews</div>
             <div className="img-container">
                 <img src={image} alt={name} className='person-img' />
