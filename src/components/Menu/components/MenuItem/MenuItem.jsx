@@ -15,7 +15,7 @@ export const MenuItem = ({ img, title, price, desc }) => {
                 </header>
                 <p className='item-text'>
                     {showText ? `${desc.substring(0, 30)}...` : desc}
-                    <button onClick={() => setShowText(prevState => !prevState)}>show</button>
+                    <button className="btn show-text__btn" onClick={() => setShowText(prevState => !prevState)}>{showText ? 'read more' : 'less'}</button>
                 </p>
             </div>
         </article>

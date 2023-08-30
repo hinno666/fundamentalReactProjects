@@ -14,7 +14,6 @@ export const Categories = ({ categories, filterItems }) => {
           onClick={() => {
             filterItems(category)
             setActiveCategory(category)
-            console.log(activeCategory);
           }}
         >
           {category}
