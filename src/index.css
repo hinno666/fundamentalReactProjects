@@ -133,6 +133,10 @@ img {
   border-radius: var(--borderRadius);
 }
 
+.withSpacing:hover {
+  box-shadow: var(--shadow-3);
+}
+
 .project__name {
   position: absolute;
   top: 0;
@@ -217,9 +221,7 @@ img {
   align-items: center;
 }
 
-.review:hover {
-  box-shadow: var(--shadow-3);
-}
+
 
 .img-container {
   position: relative;
@@ -314,13 +316,14 @@ img {
 
 .menu__items {
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
   gap: 0.5rem;
 }
 
 .menu__item {
   position: relative;
-  flex: 0 1 32.3%;
+  flex: 1 1 160px;
 }
 
 .item__price {
@@ -345,7 +348,7 @@ img {
   display: flex;
   gap: 0.5rem;
   justify-content: center;
-  margin: 20px 0;
+  margin: 40px 0 20px;
 }
 
 .btn__filter {
@@ -365,6 +368,12 @@ img {
 
 .btn__filter.active {
   background-color: var(--green-dark);
+}
+
+.btn.show-text__btn {
+  background: transparent;
+  font-weight: bold;
+  color: #5afaaf;
 }
 
 @keyframes logo-spin {
