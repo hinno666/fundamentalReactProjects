@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { questions } from "../../data";
 import { AccordionItem } from "./AccordionItem/AccordionItem";
+import './Accordion.css'
 
 export const Accordion = () => {
     const [currentAccordion, setCurrentAccordion] = useState(null);

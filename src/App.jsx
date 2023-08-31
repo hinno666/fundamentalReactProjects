@@ -1,5 +1,5 @@
-import { Navbar } from './components/Navbar'
-import { ProjectsContainer } from './components/ProjectsContainer'
+import { Navbar } from './components/Navbar/Navbar'
+import { ProjectsContainer } from './components/ProjectsContainer/ProjectsContainer'
 
 function App() {
 

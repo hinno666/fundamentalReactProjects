@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-
+import './Categories.css'
 
 
 export const Categories = ({ categories, filterItems }) => {

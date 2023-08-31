@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import './AccordionItem.css'
 
 export const AccordionItem = ({ title, info, id, currentAccordion, getId }) => {
 
