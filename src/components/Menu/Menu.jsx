@@ -2,6 +2,7 @@ import { Categories } from "./components/Categories/Categories"
 import { MenuList } from "./components/MenuList/MenuList"
 import { menu } from "../../data";
 import { useState } from "react";
+import './Menu.css'
 
 const allCategories = ['all', ...new Set(menu.map((item) => item.category))]
 

@@ -1,6 +1,7 @@
-import { Accordion } from "./Accordion/Accordion";
-import { Menu } from "./Menu/Menu";
-import Reviews from "./Reviews/Reviews";
+import { Accordion } from "../Accordion/Accordion";
+import { Menu } from "../Menu/Menu";
+import Reviews from "../Reviews/Reviews";
+import './ProjectsContainer.css'
 
 export const ProjectsContainer = () => {
     return (

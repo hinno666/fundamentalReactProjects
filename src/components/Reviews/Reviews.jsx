@@ -1,5 +1,7 @@
 import { useState } from "react";
 import { reviews } from "../../data";
+import './Reviews.css'
+
 
 const Reviews = () => {
     const [index, setIndex] = useState(0)

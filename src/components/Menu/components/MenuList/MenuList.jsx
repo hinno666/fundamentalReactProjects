@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { MenuItem } from "../MenuItem/MenuItem";
+import './MenuList.css'
 
 export const MenuList = ({ menuItems }) => {
   return (

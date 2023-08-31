@@ -1,10 +1,9 @@
 import PropTypes from "prop-types";
-import { useState } from "react";
+import { useToggle } from "../../../../hooks/Toggle";
+import './MenuItem.css'
 
 export const MenuItem = ({ img, title, price, desc }) => {
-
-    const [showText, setShowText] = useState(true);
-
+    const [show, toggle] = useToggle(true);
     return (
         <article className='menu__item'>
             <img src={img} alt={title} className='img' />
@@ -14,8 +13,8 @@ export const MenuItem = ({ img, title, price, desc }) => {
                     <span className='item__price'>${price}</span>
                 </header>
                 <p className='item-text'>
-                    {showText ? `${desc.substring(0, 30)}...` : desc}
-                    <button className="btn show-text__btn" onClick={() => setShowText(prevState => !prevState)}>{showText ? 'read more' : 'less'}</button>
+                    {show ? `${desc.substring(0, 30)}...` : desc}
+                    <button className="btn show-text__btn" onClick={toggle}>{show ? 'read more' : 'less'}</button>
                 </p>
             </div>
         </article>
