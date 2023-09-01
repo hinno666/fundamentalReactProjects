@@ -54,7 +54,7 @@ img {
   --white: #fff;
   --red-light: #f8d7da;
   --red-dark: #842029;
-  --green-light: #d1e7dd;
+  --green-light: #5afaaf;
   --green-dark: #0f5132;
 
   --small-text: 0.875rem;
@@ -118,7 +118,7 @@ img {
   text-transform: capitalize;
 }
 
-.withSpacing {
+.with-spacing {
   position: relative;
   width: 90vw;
   max-width: var(--fixed-width);
