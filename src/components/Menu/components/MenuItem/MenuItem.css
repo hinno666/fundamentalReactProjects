@@ -1,0 +1,28 @@
+.menu__item {
+  position: relative;
+  flex: 1 1 160px;
+}
+
+.item__price {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: var(--primary-600);
+  font-weight: 900;
+  padding: 5px;
+}
+
+.item__info h5 {
+  text-transform: capitalize;
+}
+
+.btn.show-text__btn {
+  background: transparent;
+  font-weight: 600;
+  color: var(--green-light);
+}
+
+.menu__item .img {
+  max-height: 105px;
+  object-fit: cover;
+}

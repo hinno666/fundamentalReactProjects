@@ -1,9 +1,13 @@
-import Navbar from './components/Navbar'
+import { Navbar } from './components/Navbar/Navbar'
+import { ProjectsContainer } from './components/ProjectsContainer/ProjectsContainer'
 
 function App() {
 
   return (
-    <Navbar />
+    <>
+      <Navbar />
+      <ProjectsContainer />
+    </>
   )
 }
 
