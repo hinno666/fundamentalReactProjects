@@ -1,15 +1,16 @@
 import PropTypes from "prop-types";
 import { useState } from "react";
-import './Categories.css'
+
+import "./Categories.css"
 
 
 export const Categories = ({ categories, filterItems }) => {
   const [activeCategory, setActiveCategory] = useState(null);
-  
+
   return (
     <div className="btn__container">{categories.map((category, index) => {
       return (
-        <button className={activeCategory === category ? 'btn__filter active' : 'btn__filter'}
+        <button className={`btn__filter${activeCategory === category ? " active" : ""}`}
           key={index}
           onClick={() => {
             filterItems(category)
@@ -20,7 +21,7 @@ export const Categories = ({ categories, filterItems }) => {
         </button>
       )
     })}</div>
-    
+
   )
 }
 
