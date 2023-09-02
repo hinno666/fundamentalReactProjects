@@ -1,6 +1,7 @@
 import { Accordion } from "../Accordion/Accordion";
 import { Menu } from "../Menu/Menu";
 import Reviews from "../Reviews/Reviews";
+import { Tabs } from "../Tabs/Tabs";
 
 import './ProjectsContainer.css'
 
@@ -11,6 +12,7 @@ export const ProjectsContainer = () => {
       <Reviews />
       <Accordion />
       <Menu />
+      <Tabs />
     </main>
   );
 }
