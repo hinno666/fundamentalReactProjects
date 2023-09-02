@@ -12,7 +12,6 @@ export const Navbar = () => {
   const linksRef = useRef(null)
   const [currentUrl, setCurrentUrl] = useState('')
 
-
   const toggleLinks = () => {
     setShowLinks(!showLinks);
   }
@@ -21,35 +20,26 @@ export const Navbar = () => {
     height: showLinks ? `${linksRef.current.getBoundingClientRect().height}px` : '0px'
   }
 
-  const checkHash = (hash) => {
-    setCurrentUrl(() => window.location.href);
-    let hashUrl = currentUrl ? hash.match(/#[^\s]+/g).join('') : '';
-    console.log(hashUrl);
-    switch (hashUrl) {
-      case '#Reviews':
-        scrollToElement('Reviews');
-        console.log('1');
-        break;
-      case '#Accordion':
-        scrollToElement('Accordion');
-        console.log(2);
-        break;
-      case '#Menu':
-        scrollToElement('Menu');
-        console.log(3);
-        break
+  const checkHash = () => {
+    const hash = window.location.hash;
+    if (hash) {
+      scrollToElement(hash.substring(1));
     }
-  }
+  };
 
   const scrollToElement = (id) => {
     const element = document.getElementById(id);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
     }
-  }
+  };
 
   useEffect(() => {
-    checkHash(currentUrl);
+    setCurrentUrl(window.location.href);
+  }, []);
+
+  useEffect(() => {
+    checkHash();
   }, [currentUrl]);
 
   return (
