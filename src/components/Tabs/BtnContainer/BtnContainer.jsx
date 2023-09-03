@@ -4,7 +4,7 @@ import './BtnContainer.css'
 
 export const BtnContainer = ({ data, currentItem, setCurrentItem }) => {
   return (
-    <div className='btn-container'>
+    <div className='btn__container'>
       {data.map((btn, index) => {
         return (
           <button className={`tab__btn ${currentItem === index ? "active" : ""}`} key={btn.id} onClick={() => setCurrentItem(index)}>{btn.company}</button>
