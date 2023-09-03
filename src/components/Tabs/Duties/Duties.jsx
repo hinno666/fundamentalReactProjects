@@ -1,13 +1,15 @@
 import PropTypes from "prop-types";
+import { FaAngleDoubleRight } from 'react-icons/fa';
 
 import './Duties.css'
 
 export const Duties = ({ duties }) => {
   return (
-    <div>
+    <div className="duties">
       {duties.map((duty, index) => {
         return (
-          <div key={index} className="job__desc">
+          <div key={index} className="duty">
+            <FaAngleDoubleRight className='duty-icon'></FaAngleDoubleRight>
             <p>{duty}</p>
           </div>
         )
