@@ -1,0 +1,11 @@
+.duty {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  column-gap: 30px;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.duty-icon {
+  color: var(--green-light);
+}
