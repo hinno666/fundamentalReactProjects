@@ -4,7 +4,11 @@ import { Duties } from "../Duties/Duties";
 import './JobInfo.css'
 
 export const JobInfo = ({ data, currentItem }) => {
-  const { company, dates, duties, title } = data[currentItem];
+  const { company, dates, duties, title } = data?.[currentItem] ?? {};
+
+  if (!data?.[currentItem]) {
+    return null
+  }
 
   return (
     <div className="job__info">
@@ -17,6 +21,9 @@ export const JobInfo = ({ data, currentItem }) => {
 }
 
 JobInfo.propTypes = {
-  data: PropTypes.array.isRequired,
+  data: PropTypes.oneOfType([
+    PropTypes.array,
+    PropTypes.object,
+  ]),
   currentItem: PropTypes.number.isRequired,
 }

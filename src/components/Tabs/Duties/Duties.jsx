@@ -4,6 +4,10 @@ import { FaAngleDoubleRight } from 'react-icons/fa';
 import './Duties.css'
 
 export const Duties = ({ duties }) => {
+  if (!duties) {
+    return null
+  }
+
   return (
     <div className="duties">
       {duties.map((duty, index) => {
@@ -19,5 +23,5 @@ export const Duties = ({ duties }) => {
 }
 
 Duties.propTypes = {
-  duties: PropTypes.array.isRequired,
+  duties: PropTypes.array,
 }

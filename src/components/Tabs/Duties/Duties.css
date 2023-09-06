@@ -1,9 +1,9 @@
 .duty {
   display: grid;
   grid-template-columns: auto 1fr;
-  column-gap: 2rem;
+  column-gap: 30px;
   align-items: center;
-  margin-bottom: 1.25rem;
+  margin-bottom: 20px;
 }
 
 .duty-icon {
