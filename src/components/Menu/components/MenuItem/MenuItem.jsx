@@ -1,4 +1,4 @@
-import { useToggle } from "../../../../hooks/Toggle";
+import { useToggle } from "@/hooks/Toggle";
 import PropTypes from "prop-types";
 
 import './MenuItem.css'

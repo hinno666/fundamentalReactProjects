@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { Categories } from "./components/Categories/Categories"
 import { MenuList } from "./components/MenuList/MenuList"
-import { menu } from "../../data";
+import { menu } from "@/data";
 
 import './Menu.css'
 

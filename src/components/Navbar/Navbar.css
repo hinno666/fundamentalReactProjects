@@ -19,8 +19,8 @@
 
 .nav-header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
   flex: auto;
 }
 
@@ -55,7 +55,34 @@
 }
 
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em var(--primary-500));
+}
+
+button.modal-btn {
+  margin: 0 20px;
+  padding: 0;
+  display: grid;
+  place-items: center;
+  border-radius: 50%;
+  width: 80px;
+  height: 80px;
+  animation: bounce 2s ease-in-out infinite;
+  transition: var(--transition);
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 2em var(--primary-500));
+  }
+
+  100% {
+    transform: scale(1);
+  }
 }
 
 @keyframes logo-spin {
@@ -69,6 +96,10 @@
 }
 
 @media (min-width: 780px) {
+  .nav-header {
+    justify-content: start;
+  }
+
   .nav-toggle {
     display: none;
   }

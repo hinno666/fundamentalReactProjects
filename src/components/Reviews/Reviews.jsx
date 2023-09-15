@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { reviews } from "../../data";
+import { reviews } from "@/data";
 
 import './Reviews.css'
 
