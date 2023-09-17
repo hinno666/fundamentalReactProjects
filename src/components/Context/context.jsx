@@ -23,5 +23,5 @@ export const AppProvider = ({ children }) => {
 export const useGlobalContext = () => useContext(AppContext)
 
 AppProvider.propTypes = {
-  children: PropTypes.object
+  children: PropTypes.element
 }

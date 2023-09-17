@@ -6,6 +6,7 @@ import './Modal.css'
 
 export const Modal = () => {
   const { isModalOpen, closeModal } = useGlobalContext()
+
   return (
     <div className={`modal-overlay ${isModalOpen ? "show-modal" : ""}`} onClick={closeModal}>
       <div className="modal" onClick={(e) => e.stopPropagation()}>
