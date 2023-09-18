@@ -1,7 +1,8 @@
 import { useEffect, useRef, useState } from 'react'
+import { useGlobalContext } from '../Context/context'
 import { FaBars } from 'react-icons/fa'
-import { links } from '../../data'
-import reactLogo from '../../assets/react.svg'
+import { links } from '@/data'
+import reactLogo from '@/assets/react.svg'
 
 import './Navbar.css'
 
@@ -10,6 +11,7 @@ export const Navbar = () => {
   const linksContainerRef = useRef(null)
   const linksRef = useRef(null)
   const [currentUrl, setCurrentUrl] = useState('')
+  const { openModal } = useGlobalContext()
 
   const toggleLinks = () => {
     setShowLinks(!showLinks);
@@ -49,6 +51,7 @@ export const Navbar = () => {
             <a href="https://react.dev" target="_blank" rel='noreferrer'>
               <img src={reactLogo} className="logo react" alt="React logo" />
             </a>
+            <button className='btn modal-btn' onClick={openModal}>surprise</button>
             <button className='nav-toggle' onClick={toggleLinks}><FaBars /></button>
           </div>
           <div className='nav__container' ref={linksContainerRef} style={linksStyles}>
